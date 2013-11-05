@@ -16,6 +16,10 @@
 Windows 8.1のスクリーンショット
 //}
 
+//image[windows81_desktop][Windows 8.1のデスクトップ]{
+Windows 8.1のデスクトップのスクリーンショット
+//}
+
 //image[macosx108][Mac OS X 10.8 Mountain Lion]{
 Mac OS X 10.8 Mountain Lionのスクリーンショット
 //}
