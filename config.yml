@@ -1,0 +1,37 @@
+# ブック名(ファイル名になるもの。ASCII範囲の文字を使用)
+bookname: Smalruby
+# 書名
+booktitle: 小・中学生にもできる！ゲームプログラミング ～Rubyを使ってゲームの作り方を学ぼう～
+# 著者
+aut: 高尾宏治
+# 以下はオプション
+# prt: 出版社
+# asn: Associated name
+# ant: Bibliographic antecedent
+# clb: 貢献者
+# edt: 編集者
+# dsr: デザイナ
+ill: 諸星
+# pht: 撮影者
+# trl: 翻訳者
+# date: 刊行日
+rights: |
+  (C) 2013 Kouji Takao
+# description: ブックの説明
+# coverimage: 表紙用画像ファイル
+# 固有IDに使用するドメイン
+# urnid: http://tatsu-zine.com/books/review-sample-book/1.0.0/
+# CSSファイル (yamlファイルおよびReVIEWファイルを置いたディレクトリにあること
+stylesheet: stylesheet.css
+# 目次として抽出するレベル
+toclevel: 2
+# セクション番号を表示するレベル
+secnolevel: 3
+# review-compileに渡すパラメータ
+params: --stylesheet=stylesheet.css
+# 目次生成用？
+mytoc: true
+# 奥付生成用
+colophon: true
+pubhistory: |
+  2014年4月1日 v1.0.0版発行
