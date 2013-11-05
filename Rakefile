@@ -9,8 +9,14 @@ task :html => :"clean:html" do
 
   sh("review-compile --all --target=html --level=3 --stylesheet=#{STYLESHEET_PATH}")
   sh("mv *.html output_html/")
-  sh("ln -sf ../images output_html/images")
-  sh("ln -sf ../stylesheet output_html/stylesheet")
+  require "rbconfig"
+  if /mswin|cygwin|mingw/ =~ RbConfig::CONFIG["arch"]
+    sh("cp -r images output_html/images")
+    sh("cp -r stylesheet output_html/stylesheet")
+  else
+    sh("ln -sf ../images output_html/images")
+    sh("ln -sf ../stylesheet output_html/stylesheet")
+  end
 end
 
 #--------------------
