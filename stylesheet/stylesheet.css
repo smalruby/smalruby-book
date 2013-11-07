@@ -1,0 +1,240 @@
+body {
+    font-family: HiraKakuProN-W3, Meiryo, IPAPGothic, MS-PGothic, san-serif;
+}
+
+.lead {
+}
+
+.title { text-align: center; }
+
+.todo  {
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: red;
+    background:#F4F4F4 url(todo.png) repeat scroll 0 0;
+}
+
+.done { color: green; }
+
+.timestamp { color: grey }
+
+.timestamp-kwd { color: CadetBlue }
+
+.tag { background-color:lightblue; font-weight:normal }
+
+.target { background-color: lavender; }
+
+table {
+    border-collapse: collapse;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    vertical-align: top;
+    border-top: 1pt solid black;
+    border-bottom: 1pt solid black;
+}
+
+p {
+    /*text-indent: 1em;*/
+    line-height: 1.8em;
+    letter-spacing: 1px;
+}
+
+li {
+    margin: 0;
+    line-height: 2em;
+}
+
+li p {
+    text-indent: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: HiraMaruPro-W4, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+    border-style: solid;
+    border-width: 0.6em 0 0 0;
+    border-color: royalblue;
+    font-size: 1.8em;
+    padding: 0.3em 0 0 0;
+    margin: 0;
+}
+
+h2 {
+    font-family: HiraKakuPro-W6, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+    border-style: solid;
+    border-width: 0.1em 0 0 0;
+    border-color: royalblue;
+    padding: 0.5em 0;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: HiraKakuPro-W6, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+}
+
+h4 {
+    font-family: HiraKakuPro-W6, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+    font-size: 1.0em;
+    line-height: 2em;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+h5 {
+    font-family: HiraKakuPro-W6, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    line-height: 2em;
+    letter-spacing: 1px;
+}
+
+.image {
+    text-align: center;
+    text-indent: 0;
+}
+
+.image img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    max-width: 90%;
+    max-height: 75%;
+}
+
+img {
+    display: inline;
+}
+
+p img {
+    max-height: 640px;
+}
+
+.illustration {
+    font-size: 80%;
+    border: 1px gray solid;
+    margin: 2em;
+}
+
+div.footnote {
+    border-style: solid;
+    border-width: 1px 0px 1px 0px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 80%;
+    font-weight: bold;
+    font-family: HiraMaruPro-W4, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+}
+
+div.footnote p {
+    text-indent: 0;
+}
+
+.tips {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 2px solid black;
+    /*font-size: 90%;*/
+    margin: 1em 0em;
+    padding: 1em;
+    font-family: HiraMaruPro-W4, Meiryo, IPAPGothic, MS-PGothic, sans-serif;
+}
+
+.tips h1, .tips h2, .tips h3, .tips h4 {
+    font-size: 1.25em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: 0;
+}
+
+.tips p {
+    text-indent: 0;
+}
+
+.column {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: royalblue;
+    border: 2px solid royalblue;
+    color: white;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.column h3, .column h4, .column h5 {
+    font-size: 14pt;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+
+.tech_note {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid #809FFF;
+    color: #333333;
+    padding: 1em;
+    /*width: 45em;*/
+}
+
+#postamble {
+    margin-top: 2em;
+    border-top: 2px solid gray;
+    width: 100%;
+    text-align: right;
+    font-size: 80%;
+    font-style: italic;
+}
+
+/* pre : プログラムリスト, コマンドライン */
+.code, .cmd, .list, .emlist {
+    margin: 0px 0px 1em 0px;;
+    font-size: 100%;
+    font-family: monospace;
+    line-height: 1.6em;
+    padding: 0.5em;
+    line-height: 1em;
+}
+
+.cmd {
+    color: #eee;
+    background-color: #444;
+}
+
+.list, .emlist {
+    background-color: #eee;
+}
+
+/* キャプション */
+p.caption {
+    margin: 0;
+    text-indent: 0;
+    font-family: HiraMaruPro-W4, IPAPGothic, MS-PGothic, sans-serif;
+    font-size: 10pt;
+}
+
+/* キーワード */
+.kw {
+    font-weight: bold;
+    font-family: HiraMaruPro-W4, IPAPGothic, MS-PGothic, sans-serif;
+}
