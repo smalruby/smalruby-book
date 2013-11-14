@@ -1,6 +1,8 @@
 = Smalrubyのインストール
 
-まずはSmalrubyをコンピュータに入れて使えるようにしよう。このことを「Smalrubyをインストールする」ともいうんだ。少し時間がかかるけど、難しいものではないから一緒にやってみよう。
+//lead{
+まずはSmalrubyをコンピュータに入れて使えるようにしよう。このことを「Smalrubyをインストールする」ともいうんだ。少し時間がかかったり、難しい言葉が画面にでてくるのでおうちの人と一緒にやってみよう。
+//}
 
 きみが持っているコンピュータにはオペレーティングシステム@<fn>{os}っていうソフトウェアが入っていて、その種類によってやり方が違うんだ。ここでは次の4つについて説明するよ。
 
@@ -35,7 +37,106 @@ GNU/Linux (Ubuntu)のスクリーンショット
 
 == Microsoft Windows 8.1の場合
 
-Microsoft Windows 8.1を使っている
+Microsoft Windows 8.1を使っている場合はSmalrubyといっしょに次のソフトウェアもインストールする必要があるんだ。
+
+ * Ruby@<fn>{ruby}とDevKit@<fn>{devkit}
+ * Smalruby
+
+それでは上から順番にインストールしてみよう。
+
+//footnote[ruby][http://ja.wikipedia.org/wiki/Ruby]
+//footnote[devkit][Rubyに関連したソフトウェアをインストールするときに使うソフトウェアです。英語ではあるけど http://rubyinstaller.org/add-ons/devkit/ に説明があるよ。]
+
+=== STEP1: RubyとDevKit
+
+まずはインターネットからRubyと、DevKitという2つのソフトウェアを取ってきます。インターネットなどからソフトウェアなどを取ってくることを@<kw>{ダウンロード}というんだ。よく使う言葉だから覚えておこう。
+
+インターネットを開いて「http://rubyinstaller.org」にアクセスします。たくさんの英語が表示されているけど落ち着いて一緒にやっていこう。
+
+//image[search_rubyinstaller_org][検索に「rubyinstaller.org」と入力することで「http://rubyinstaller.org」にアクセスすることもできるよ]
+
+表示された画面の「Download」ボタンを押します。
+
+//image[rubyinstaller_org][RubyInstaller for Windowsのウェブサイト]
+
+表示された画面の左側に「Ruby 2.0.0-p247」と表示されているのが見つけられるかな。見つかったらそれを押してね。そのすぐ下に「Ruby 2.0.0-p247 (x64)」というのもあるけど、これじゃないから間違えないでね。
+
+//image[ruby_download_link][Ruby 2.0.0-p247を押す]
+
+画面の下側に「dl.bintray.comからrubyinstaller-2.0.0-p247.exe(16.0MB)を実行または保存しますか？」と表示されているよね。その横の「保存(S)」ボタンを押してね。
+
+//image[downloading_ruby][保存(S)ボタンを押す]
+
+少し待っていると「rubyinstaller-2.0.0-p247.exeのダウンロードが完了しました。」と表示されるはず。これでRubyをダウンロードできたよ。それじゃあその横の「実行(R)」ボタンを押して、Rubyをインストールしよう。
+
+//image[downloaded_ruby][実行(R)ボタンを押す]
+
+ここからは画面の表示に従ってRubyをインストールするよ。
+
+//image[install_ruby_01][「OK」ボタンを押す]
+//image[install_ruby_02][「同意する(A)」を押してから「次へ(N) >」ボタンを押す]
+//image[install_ruby_03][「Tcl/Tkサポートをインストールする」「Rubyの実行ファイルへ環境変数PATHを設定する」「.rbと.rbwファイルをRubyに関連づける」を押してから「インストール(I)」ボタンを押す]
+//image[install_ruby_04][「完了(F)」ボタンを押す]
+
+これでRubyのインストールは完了だよ。
+
+続けてDevKitもダウンロード・インストールしよう。
+
+さっきRubyをダウンロードしたインターネットの画面を少し下にずらすと「DEVELOPMENT KIT」と表示されているのがわかるかな。そこからもう少し下のほうに「DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exe」という赤い文字が見つけられるかな。目印としてその文字の上に「For use with Ruby 2.0 (32bits version only):」と書かれているよ。見つけられたらそれを押してね。
+
+さっきと同じように画面の下に「保存」ボタンが表示されるから、そのボタンを押してね。
+
+//image[downloading_devkit][DevKit-mingw64-32-4.7.2-20130224-1151-sfx.exeを押して、保存(S)ボタンを押す]
+
+しばらくすると、これもさっきと同じように「実行(R)」ボタンが表示されるから、そのボタンを押してDevKitをインストールしよう。
+
+//image[downloaded_devkit][実行(R)ボタンを押す]
+
+以下の画面のようにキーボードを操作して「C:\devkit」と入力して「extract」ボタンを押します。しばらくして画面が消えたらOKだよ。でもDevKitのインストールはこれだけでは終わりじゃなくて、もう少しやることがあるんだ。
+
+//image[install_devkit_01][「C:\devkit」と入力して「extract」ボタンを押す]
+
+スタート画面から「コマンド プロンプト」というアプリを探して起動します。「コマンド プロンプト」は「Windows システムツール」の近くにあるよ。
+
+//image[search_cmd][検索に「コマンド」と入力することで「コマンド プロンプト」を起動することもできるよ]
+
+キーボードを操作して以下を順番に入力するんだけど注意することがいくつかあるんだ。
+
+//cmd{
+cd \devkit
+ruby dk.rb init
+ruby dk.rb install
+//}
+
+1つは、「cd」と「\devkit」のように少し間が空いているところはスペースキーを打って必ず間を空けること。
+
+もう1つは、「cd \devkit」まで入力したらEnterキーを打つこと。
+
+それじゃあ、順番に入力していこう。
+
+//image[install_devkit_02][DevKitのインストール]
+
+これでDevKitもインストールできた。コマンド プロンプトは立ち上げたままで次のステップに進んでね。
+
+=== STEP2: Smalruby
+
+続けてSmalrubyをインストールするよ。
+
+コマンド プロンプトで以下のコマンドを実行します。
+
+//cmd{
+>gem install smalruby
+//}
+
+//image[install_smalruby_01][Smalrubyのインストール]
+
+しばらくすると、「C:\devkit>」と表示されます。またその上には「8 gems installed」と表示されているはず。これでSmalrubyをインストールできた。RubyやDevKitに比べると簡単だったね。
+
+//image[install_smalruby_02][Smalrubyのインストール完了！]
+
+これでプログラムを作る準備ができたよ。
+
+それじゃあ、次の章に進もう！！
 
 == Mac OS X Mountain Lionの場合
 
