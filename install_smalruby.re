@@ -125,7 +125,7 @@ ruby dk.rb install
 コマンド プロンプトで以下のコマンドを実行します。
 
 //cmd{
->gem install smalruby
+gem install smalruby
 //}
 
 //image[install_smalruby_01][Smalrubyのインストール]
@@ -142,11 +142,11 @@ ruby dk.rb install
 
 Mac OS X Mountain Lionを使っている場合はSmalrubyといっしょに次のソフトウェアもインストールする必要があるんだ。
 
- * STEP1: Xcode
- * STEP2: Homebrew
- * STEP3: Ruby
- * STEP4: SDL
- * STEP5: Smalruby
+ * Xcode
+ * Homebrew
+ * Ruby
+ * SDL
+ * Smalruby
 
 それでは順番にインストールしてみよう。
 
@@ -268,21 +268,26 @@ $ source ~/.bash_profile
 以下のコマンドを実行する。
 
 //cmd{
-$ rbenv install 1.9.3-p448
+$ rbenv install 2.0.0-p247
 //}
 
 以下のように表示されます。
 
 //cmd{
-Downloading ruby-1.9.3-p448.tar.gz...
--> http://dqw8nmjcqpjn7.cloudfront.net/a893cff26bcf351b8975ebf2a63b1023
-Installing ruby-1.9.3-p448...
+Downloading openssl-1.0.1e.tar.gz...
+-> http://dqw8nmjcqpjn7.cloudfront.net/66bf6f10f060d561929de96f9dfe5b8c
+Installing openssl-1.0.1e...
 //}
 
 しばらく待っていると以下のように表示されてインストールが完了します。
 
 //cmd{
-Installed ruby-1.9.3-p448 to /Users/matsue-city15/.rbenv/versions/1.9.3-p448
+Installed openssl-1.0.1e to /Users/matsue-city15/.rbenv/versions/2.0.0-p247
+
+Downloading ruby-2.0.0-p247.tar.gz...
+-> http://dqw8nmjcqpjn7.cloudfront.net/c351450a0bed670e0f5ca07da3458a5b
+Installing ruby-2.0.0-p247...
+Installed ruby-2.0.0-p247 to /Users/matsue-city15/.rbenv/versions/2.0.0-p247
 
 $
 //}
@@ -296,21 +301,21 @@ $ rbenv versions
 以下のように表示されたら正しくインストールされています。
 
 //cmd{
-* system (set by /Users/matsue-city15/.rbenv/version)
-  1.9.3-p448
+* system (set by /Users/<名前>/.rbenv/version)
+  2.0.0-p247
 //}
 
 以下のコマンドを実行する。
 
 //cmd{
-$ rbenv global 1.9.3-p448
+$ rbenv global 2.0.0-p247
 //}
 
 以下のコマンドを実行して、表示された結果が一致していれば正しく設定できている。
 
 //cmd{
 $ ruby --version
-ruby 1.9.3p448 (2013-06-27 revision 41675) [x86_64-darwin12.4.0]
+ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.4.0]
 //}
 
 ====[column] RVMをアンインストールする
