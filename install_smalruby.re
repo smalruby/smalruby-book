@@ -323,10 +323,15 @@ $ rbenv versions
 $ rbenv global 2.0.0-p247
 //}
 
-以下のコマンドを実行して、表示された結果が一致していれば正しく設定できている。
+以下のコマンドを実行する。
 
 //cmd{
 $ ruby --version
+//}
+
+以下のように表示されれば正しく設定できています。
+
+//cmd{
 ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.4.0]
 //}
 
@@ -354,7 +359,7 @@ This will recursively remove /usr/local/rvm and other rvm traces?
 (anything other than 'yes' will cancel) > yes
 //}
 
-以下のように表示されたらokです。
+以下のように表示されたらOKです。
 
 //cmd{
 Removing rvm-shipped binaries (rvm-prompt, rvm, rvm-sudo rvm-shell and rvm-auto-ruby)
@@ -406,66 +411,16 @@ $ sudo vi /etc/profile
 SDLをインストールします。
 
 //cmd{
-$ brew install sdl
+$ brew install sdl sdl_image sdl_mixer sdl_ttf https://gist.github.com/mitmul/5410467/raw/c4fa716635e951b61f489726976b10f00dd41306/sge.rb
+//}
+
+以下のように表示されたらSDLのインストールが完了です。
+
+//cmd{
 ==> Downloading http://www.libsdl.org/release/SDL-1.2.15.tar.gz
 ######################################################################## 100.0%
 ==> ./configure --prefix=/usr/local/Cellar/sdl/1.2.15 --without-x
 (ここで少し待つ)
-==> make install
-🍺  /usr/local/Cellar/sdl/1.2.15: 223 files, 2.1M, built in 45 seconds
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ brew install sdl_image
-==> Installing dependencies for sdl_image: jpeg, libpng, libtiff, webp
-==> Installing sdl_image dependency: jpeg
-==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/jpeg-8d.mou
-######################################################################## 100.0%
-==> Pouring jpeg-8d.mountain_lion.bottle.tar.gz
-(省略)
-==> Installing sdl_image
-==> Downloading http://www.libsdl.org/projects/SDL_image/release/SDL_image-1.2.1
-######################################################################## 100.0%
-==> ./configure --prefix=/usr/local/Cellar/sdl_image/1.2.12 --disable-sdltest
-==> make install
-🍺  /usr/local/Cellar/sdl_image/1.2.12: 8 files, 140K, built in 14 seconds
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ brew install sdl_mixer
-==> Downloading http://www.libsdl.org/projects/SDL_mixer/release/SDL_mixer-1.2.1
-######################################################################## 100.0%
-==> ./configure --prefix=/usr/local/Cellar/sdl_mixer/1.2.12
-==> make install
-🍺  /usr/local/Cellar/sdl_mixer/1.2.12: 8 files, 424K, built in 16 seconds
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ brew install sdl_ttf
-==> Installing sdl_ttf dependency: freetype
-==> Downloading https://downloads.sf.net/project/machomebrew/Bottles/freetype-2.
-######################################################################## 100.0%
-==> Pouring freetype-2.5.0.1.mountain_lion.bottle.1.tar.gz
-🍺  /usr/local/Cellar/freetype/2.5.0.1: 59 files, 2.6M
-==> Installing sdl_ttf
-==> Downloading http://www.libsdl.org/projects/SDL_ttf/release/SDL_ttf-2.0.11.ta
-######################################################################## 100.0%
-==> ./configure --prefix=/usr/local/Cellar/sdl_ttf/2.0.11 --disable-sdltest
-==> make install
-🍺  /usr/local/Cellar/sdl_ttf/2.0.11: 8 files, 100K, built in 12 seconds
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ brew install https://gist.github.com/mitmul/5410467/raw/c4fa716635e951b61f489726976b10f00dd41306/sge.rb
-
 ==> Cloning git://github.com/flibitijibibo/libSGE.git
 Cloning into '/Library/Caches/Homebrew/sge--git'...
 remote: Counting objects: 78, done.
@@ -571,7 +526,7 @@ smalruby 0.0.1 built to pkg/smalruby-0.0.1.gem.
 以下のコマンドを実行する。
 
 //cmd{
-$ gem install pkg/smalruby-0.0.1.gem
+$ gem install -l pkg/smalruby-0.0.1.gem
 Successfully installed smalruby-0.0.1
 1 gem installed
 //}
