@@ -6,11 +6,10 @@
 
 きみが持っているコンピュータには@<kw>{オペレーティングシステム(Operating System)}@<fn>{os}っていうソフトウェアが入っていて、その種類によってSmalrubyをインストールするやり方が違うんだ。オペレーティングシステムは頭文字をとって@<kw>{OS(オーエス)}と呼ばれることが多い。この本でもそう呼ぶことにするよ。
 
-ここでは次の4つの種類のOSについて説明するよ。
+ここでは次の3つの種類のOSについて説明するよ。
 
  * Microsoft Windows 8.1
  * Mac OS X Mountain Lion
- * Mac OS X Mavericks
  * GNU/Linux (Ubuntu)
 
 //footnote[os][http://ja.wikipedia.org/wiki/オペレーティングシステム]
@@ -27,10 +26,6 @@ Microsoft Windows 8.1のスクリーンショット
 
 //image[macosx108][Mac OS X Mountain Lionの画面]{
 Mac OS X Mountain Lionのスクリーンショット
-//}
-
-//image[macosx109][Mac OS X Mavericksの画面]{
-Mac OS X Mavericksのスクリーンショット
 //}
 
 //image[linuxubuntu][GNU/Linux (Ubuntu)の画面]{
@@ -160,7 +155,7 @@ Mac OS X Mountain Lionを使っている場合はSmalrubyといっしょに次�
 
 それでは順番にインストールしてみよう。
 
-=== STEP1: Xcode
+=== Xcode
 
 はじめにインストールするのは@<kw>{Xcode}だ。
 @<kw>{Xcode}はきみが使っているコンピュータを使ってプログラムを作るためには必ず必要になるソフトウェアなんだ。まずはこれをインストールしよう。
@@ -175,21 +170,23 @@ App Store...のメニュー
 
 メニューから「App Store...」をクリックします。すると@<img>{app_store}のような画面が表示されます。これが@<kw>{App Store}です。
 
+@<kw>{App Store}の画面の右上に虫眼鏡のマークがある。その横の部分をクリックしてキーボードで「Xcode」と入力します。すると、画面に@<kw>{Xcode}のアイコンと「インストール」というボタンが表示される。「インストール」ボタンを押すと、さきほど用意した@<kw>{Apple ID}とパスワードを入力するための画面が表示される。それぞれを入力して「サインイン」ボタンを押すとインストールが開始されます。
+
 //image[app_store][App Store]{
 App Storeのトップ画面
 //}
 
-@<kw>{App Store}の画面の右上に虫眼鏡のマークがある。その横の部分をクリックしてキーボードで「Xcode」と入力します。すると、画面に@<kw>{Xcode}のアイコンと「インストール」というボタンが表示される。「インストール」ボタンを押すと、さきほど用意した@<kw>{Apple ID}とパスワードを入力するための画面が表示される。それぞれを入力して「サインイン」ボタンを押すとインストールが開始されます。
-
 このときインターネットから大きなファイル（約1.5GB）のファイルをダウンロードするため時間がかかります。ときどき画面を見ながら気長に待ちましょう。
 
-インストールできたら、Xcodeを起動します。
-メニューの[Xcode]-[Preferences…]を選択します。
-DownloadsタブのComponentsタブを選択します。
-Command Line ToolsのInstallボタンをクリックします。
-インストールされるまでしばらく待ちます。
+インストールできたらXcodeを起動します。
 
-Mavericksの場合は xcode-select --installを実行する。
+メニューから[Xcode]-[Preferences…]を選択します。
+
+DownloadsタブのComponentsタブを選択します。
+
+Command Line ToolsのInstallボタンをクリックします。
+
+インストールされるまでしばらく待ちます。
 
 === Homebrew
 
@@ -197,10 +194,10 @@ Mavericksの場合は xcode-select --installを実行する。
 
 以下のコマンドを実行します。
 //cmd{
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 //}
 
-以下の表示がでます。returnキーを押します。
+次のように表示されますのでreturnキーを押します。
 
 //cmd{
 ==> This script will install:
@@ -213,14 +210,14 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 Press ENTER to continue or any other key to abort
 //}
 
-以下の表示がでます。コンピュータを使うときに入力するパスワードを入れてenterキーを押します。秘密を守るために入力したパスワードは画面には表示されないよ。もし打ち間違えた場合はcontrolキーとuキーを同時に押すとやり直せます。
+次のように表示されますのでコンピュータを使うときに入力するパスワードを入れてreturnキーを押します。ここで注意してほしいのは、入力したパスワードは秘密を守るために画面には表示されない。もし打ち間違えた場合はcontrolキーとuキーを同時に押すとやり直すことができる。
 
 //cmd{
 ==> /usr/bin/sudo /bin/chmod g+rwx /usr/local/.
 Password:
 //}
 
-以下の表示が出たら完了です。
+次のように「Now type: brew help」と表示されたら完了です。
 
 //cmd{
 ==> Downloading and installing Homebrew...
@@ -240,15 +237,15 @@ Now type: brew help
 
 === Ruby
 
-Rubyをインストールします。
+続いてRubyをインストールします。
 
 ターミナルを起動して以下のコマンドを実行する。
 
 //cmd{
-$ brew install rbenv ruby-build
+brew install rbenv ruby-build
 //}
 
-以下のように表示されてインストールが完了する。
+次のように表示されてインストールが完了する。
 
 //cmd{
 ==> Downloading https://github.com/sstephenson/rbenv/archive/v0.4.0.tar.gz
@@ -269,21 +266,16 @@ To enable shims and autocompletion add to your profile:
 🍺  /usr/local/Cellar/ruby-build/20131030: 89 files, 396K, built in 4 seconds
 //}
 
-以下のコマンドを順番に実行します。
+次のコマンドを順番に実行します。
 
 //cmd{
-$ echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
-$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-$ source ~/.bash_profile
+echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+rbenv install 2.0.0-p247
 //}
 
-以下のコマンドを実行する。
-
-//cmd{
-$ rbenv install 2.0.0-p247
-//}
-
-以下のように表示されます。
+次のように表示されます。
 
 //cmd{
 Downloading openssl-1.0.1e.tar.gz...
@@ -291,7 +283,7 @@ Downloading openssl-1.0.1e.tar.gz...
 Installing openssl-1.0.1e...
 //}
 
-しばらく待っていると以下のように表示されてインストールが完了します。
+しばらく待っていると次のように表示されてインストールが完了します。
 
 //cmd{
 Installed openssl-1.0.1e to /Users/matsue-city15/.rbenv/versions/2.0.0-p247
@@ -304,32 +296,27 @@ Installed ruby-2.0.0-p247 to /Users/matsue-city15/.rbenv/versions/2.0.0-p247
 $
 //}
 
-インストールされていることを確認するには以下のコマンドを実行します。
+インストールされていることを確認するには次のコマンドを実行します。
 
 //cmd{
-$ rbenv versions
+rbenv versions
 //}
 
-以下のように表示されたら正しくインストールされています。
+次のように表示されたら正しくインストールされています。
 
 //cmd{
 * system (set by /Users/<名前>/.rbenv/version)
   2.0.0-p247
 //}
 
-以下のコマンドを実行する。
+次のコマンドを順番に実行します。
 
 //cmd{
-$ rbenv global 2.0.0-p247
+rbenv global 2.0.0-p247
+ruby --version
 //}
 
-以下のコマンドを実行する。
-
-//cmd{
-$ ruby --version
-//}
-
-以下のように表示されれば正しく設定できています。
+次のように表示されれば正しく設定できています。
 
 //cmd{
 ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.4.0]
@@ -337,15 +324,17 @@ ruby 2.0.0p247 (2013-06-27 revision 41674) [x86_64-darwin12.4.0]
 
 ====[column] RVMをアンインストールする
 
-ターミナルを起動する。
+本書ではrbenvを使うことを前提にしています。すでにRVMをインストールしている人で、もしRVMをアンインストールしても問題ないようでしたら、ここで説明するやり方でRVMをアンインストールしましょう。
 
-以下のコマンドを実行する。
+ターミナルを起動します。
+
+次のコマンドを実行します。
 
 //cmd{
-$ rvm seppuku
+rvm seppuku
 //}
 
-以下が表示されます。
+次のように表示されます。
 
 //cmd{
 Are you SURE you wish for rvm to implode?
@@ -353,13 +342,13 @@ This will recursively remove /usr/local/rvm and other rvm traces?
 (anything other than 'yes' will cancel) >
 //}
 
-以下のようにキーボードでyesを入力してenterキーを押す。
+次のようにキーボードで「yes」と入力してenterキーを押します。
 
 //cmd{
 (anything other than 'yes' will cancel) > yes
 //}
 
-以下のように表示されたらOKです。
+次のように表示されたらOKです。
 
 //cmd{
 Removing rvm-shipped binaries (rvm-prompt, rvm, rvm-sudo rvm-shell and rvm-auto-ruby)
@@ -374,35 +363,31 @@ Also make sure to remove `rvm` group if this was a system installation.
 Finally it might help to relogin / restart if you want to have fresh environment (like for installing RVM again).
 //}
 
-RailsInstallerでインストールされたファイルを削除する。
+もしRailsInstallerでRVMをインストールしていた場合は関連するファイルや設定も削除する。
 
-ターミナルを起動する。
+ターミナルを起動します。
 
-以下のコマンドを実行する。
+次ののコマンドを実行します。
 
 //cmd{
-$ sudo rm /etc/profile.d/rvm.sh /etc/rvmrc
+sudo rm /etc/profile.d/rvm.sh /etc/rvmrc
 //}
 
-以下のように表示されたら、ログインするときに入力するパスワードを入力してenterキーを押す。
+次のように表示されたら、ログインするときに入力するパスワードを入力してenterキーを押します。
 
 //cmd{
 Password:
 //}
 
-以下のように表示されたら削除できています。
+設定ファイルを修正します。以下のコマンドを実行してエディタを起動します。
 
 //cmd{
-$
+sudo vi /etc/profile
 //}
 
-設定ファイルを修正します。以下のコマンドを実行してエディタを起動します。そして最下部にある「source /etc/profile.d/rvm.sh」の行を削除します。カーソルキーで上記の行に移動して、キーボードのdを2回押す。ここで画面下部に赤い文字で「W10: Warning: Changing a readonly file」と表示されるが問題ない。行が消えたら、キーボードの「:」「w」「q」「!」を順番に押してennterキーを押す。
+そして最下部にある「source /etc/profile.d/rvm.sh」の行を削除します。カーソルキーで上記の行に移動して、キーボードのdを2回押します。このとき画面下部に赤い文字で「W10: Warning: Changing a readonly file」と表示されますが問題ありません。行が消えたらキーボードの「:」「w」「q」「!」を順番に押してennterキーを押します。
 
-//cmd{
-$ sudo vi /etc/profile
-//}
-
-これでrvmのアンインストールができました。
+これでrvmをアンインストールできました。
 
 アンインストールした結果を反映させるために、いったん、ターミナルを終了させます。
 
@@ -411,16 +396,13 @@ $ sudo vi /etc/profile
 SDLをインストールします。
 
 //cmd{
-$ brew install sdl sdl_image sdl_mixer sdl_ttf https://gist.github.com/mitmul/5410467/raw/c4fa716635e951b61f489726976b10f00dd41306/sge.rb
+brew install sdl sdl_image sdl_mixer sdl_ttf https://gist.github.com/mitmul/5410467/raw/c4fa716635e951b61f489726976b10f00dd41306/sge.rb
 //}
 
-以下のように表示されたらSDLのインストールが完了です。
+しばらくして、以下のように表示されたらSDLのインストールが完了です。
 
 //cmd{
-==> Downloading http://www.libsdl.org/release/SDL-1.2.15.tar.gz
-######################################################################## 100.0%
-==> ./configure --prefix=/usr/local/Cellar/sdl/1.2.15 --without-x
-(ここで少し待つ)
+(省略)
 ==> Cloning git://github.com/flibitijibibo/libSGE.git
 Cloning into '/Library/Caches/Homebrew/sge--git'...
 remote: Counting objects: 78, done.
@@ -436,11 +418,15 @@ Resolving deltas: 100% (5/5), done.
 
 === Smalruby
 
-以下のコマンドを実行する。
+次のコマンドを実行します。
 
 //cmd{
-$ cd ~
-$ git clone https://github.com/smalruby/smalruby smalruby-lib
+git clone https://github.com/smalruby/smalruby smalruby-lib
+//}
+
+次のように表示されます。
+
+//cmd{
 Cloning into 'smalruby-lib'...
 remote: Counting objects: 249, done.
 remote: Compressing objects: 100% (184/184), done.
@@ -449,36 +435,36 @@ Receiving objects: 100% (249/249), 82.76 KiB, done.
 Resolving deltas: 100% (115/115), done.
 //}
 
-以下のコマンドを実行する。
+次のコマンドを順番に実行します。
 
 //cmd{
-$ cd smalruby-lib/
+cd smalruby-lib/
+echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
+gem install bundler
 //}
 
-以下のコマンドを実行する。
+次のように表示されます。
 
 //cmd{
-$ echo 'gem: --no-ri --no-rdoc' > ~/.gemrc
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ gem install bundler
 Successfully installed bundler-1.3.5
 1 gem installed
 //}
 
-以下のコマンドを実行する。
+次のコマンドを実行します。
 
 //cmd{
-$ rbenv rehash
+rbenv rehash
 //}
 
-以下のコマンドを実行する。
+次のコマンドを実行します。
 
 //cmd{
-$ bundle
+bundle
+//}
+
+しばらくすると次のように表示されます。
+
+//cmd{
 Fetching gem metadata from https://rubygems.org/.........
 Fetching gem metadata from https://rubygems.org/..
 Resolving dependencies...
@@ -504,33 +490,40 @@ Your bundle is complete!
 Use `bundle show [gemname]` to see where a bundled gem is installed.
 //}
 
-以下のコマンドを実行する。
+次のコマンドを実行します。
 
 //cmd{
-$ rbenv rehash
+rbenv rehash
+rake build
 //}
 
-サンプルプログラムを起動する。画面をクリックすると○が表示され、escキーを押すと終了する。
+次のように表示されます。
 
 //cmd{
-$ bundle exec rsdl samples/finding_cars.rb
-//}
-
-以下のコマンドを実行する。
-
-//cmd{
-$ rake build
 smalruby 0.0.1 built to pkg/smalruby-0.0.1.gem.
 //}
 
-以下のコマンドを実行する。
+次のコマンドを実行します。
 
 //cmd{
-$ gem install -l pkg/smalruby-0.0.1.gem
+gem install -l pkg/smalruby-0.0.1.gem
+//}
+
+次のように表示されます。
+
+//cmd{
 Successfully installed smalruby-0.0.1
 1 gem installed
 //}
 
-== Mac OS X Mavericksの場合
+Samlrubyがインストールできたことを確認するために、サンプルプログラムを起動します。
+
+//cmd{
+rsdl samples/finding_cars.rb
+//}
+
+画面をクリックすると○が表示され、escキーを押すと終了します。
+
+これでプログラムを作る準備ができたよ。それじゃあ、次の章に進もう！！
 
 == GNU/Linux (Ubuntu)の場合
