@@ -184,12 +184,14 @@ App Storeのトップ画面
 このときインターネットから大きなファイル（約1.5GB）のファイルをダウンロードするため時間がかかります。ときどき画面を見ながら気長に待ちましょう。
 
 インストールできたら、Xcodeを起動します。
-メニューの[Xcode]-[Preference…]を選択します。
+メニューの[Xcode]-[Preferences…]を選択します。
 DownloadsタブのComponentsタブを選択します。
 Command Line ToolsのInstallボタンをクリックします。
 インストールされるまでしばらく待ちます。
 
-=== STEP2: Homebrew
+Mavericksの場合は xcode-select --installを実行する。
+
+=== Homebrew
 
 ターミナルを起動します。
 
@@ -211,7 +213,7 @@ $ /usr/bin/ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 Press ENTER to continue or any other key to abort
 //}
 
-以下の表示がでます。コンピュータを使うときに入力するパスワードを入れてenterキーを押します。
+以下の表示がでます。コンピュータを使うときに入力するパスワードを入れてenterキーを押します。秘密を守るために入力したパスワードは画面には表示されないよ。もし打ち間違えた場合はcontrolキーとuキーを同時に押すとやり直せます。
 
 //cmd{
 ==> /usr/bin/sudo /bin/chmod g+rwx /usr/local/.
@@ -270,8 +272,8 @@ To enable shims and autocompletion add to your profile:
 以下のコマンドを順番に実行します。
 
 //cmd{
-$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 $ echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
+$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 $ source ~/.bash_profile
 //}
 
