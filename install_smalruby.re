@@ -6,11 +6,10 @@
 
 きみが持っているコンピュータには@<kw>{オペレーティングシステム(Operating System)}@<fn>{os}っていうソフトウェアが入っていて、その種類によってSmalrubyをインストールするやり方が違うんだ。オペレーティングシステムは頭文字をとって@<kw>{OS(オーエス)}と呼ばれることが多い。この本でもそう呼ぶことにするよ。
 
-ここでは次の3つの種類のOSについて説明するよ。
+ここでは次の2つの種類のOSについて説明するよ。
 
  * Microsoft Windows 8.1
  * Mac OS X Mountain Lion
- * GNU/Linux (Ubuntu)
 
 //footnote[os][http://ja.wikipedia.org/wiki/オペレーティングシステム]
 
@@ -26,10 +25,6 @@ Microsoft Windows 8.1のスクリーンショット
 
 //image[macosx108][Mac OS X Mountain Lionの画面]{
 Mac OS X Mountain Lionのスクリーンショット
-//}
-
-//image[linuxubuntu][GNU/Linux (Ubuntu)の画面]{
-GNU/Linux (Ubuntu)のスクリーンショット
 //}
 
 == Microsoft Windows 8.1の場合
@@ -525,5 +520,3 @@ rsdl samples/finding_cars.rb
 画面をクリックすると○が表示され、escキーを押すと終了します。
 
 これでプログラムを作る準備ができたよ。それじゃあ、次の章に進もう！！
-
-== GNU/Linux (Ubuntu)の場合
