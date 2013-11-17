@@ -155,7 +155,7 @@ Mac OS X Mountain Lionを使っている場合はSmalrubyといっしょに次�
 
 それでは順番にインストールしてみよう。
 
-=== Xcode
+=== Xcodeのインストール
 
 はじめにインストールするのは@<kw>{Xcode}だ。
 @<kw>{Xcode}はきみが使っているコンピュータを使ってプログラムを作るためには必ず必要になるソフトウェアなんだ。まずはこれをインストールしよう。
@@ -188,7 +188,7 @@ Command Line ToolsのInstallボタンをクリックします。
 
 インストールされるまでしばらく待ちます。
 
-=== Homebrew
+=== Homebrewのインストール
 
 ターミナルを起動します。
 
@@ -235,7 +235,7 @@ You should run `brew doctor' *before* you install anything.
 Now type: brew help
 //}
 
-=== Ruby
+=== Rubyのインストール
 
 続いてRubyをインストールします。
 
@@ -391,7 +391,7 @@ sudo vi /etc/profile
 
 アンインストールした結果を反映させるために、いったん、ターミナルを終了させます。
 
-=== SDL
+=== SDLのインストール
 
 SDLをインストールします。
 
@@ -416,7 +416,7 @@ Resolving deltas: 100% (5/5), done.
 🍺  /usr/local/Cellar/sge/r030809: 4 files, 44K, built in 4 seconds
 //}
 
-=== Smalruby
+=== Smalrubyのインストール
 
 次のコマンドを実行します。
 
