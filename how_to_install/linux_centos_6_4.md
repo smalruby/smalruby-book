@@ -106,5 +106,3 @@ ruby finding_cars.rb
 ```
 
 これでSmalrubyをインストールできました。
-
-https://github.com/smalruby/smalruby-book/wiki/_new
